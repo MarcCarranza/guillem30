@@ -1,0 +1,34 @@
+.home {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__resposta {
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.resposta__title {
+    font-weight: bold;
+}
+
+.resposta__input {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    padding: .5rem 0;
+    width: 100%;
+    resize: none;
+    min-height: 120px;
+}
+
+.resposta__button {
+    text-transform: uppercase;
+    font-weight: bolder;
+}

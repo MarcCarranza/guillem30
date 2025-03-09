@@ -1,0 +1,14 @@
+.visual {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visual__text {
+    font-size: 2rem;
+    max-width: 400px;
+    font-weight: bolder;
+}
