@@ -5,12 +5,15 @@ function Home () {
     const [text, setText] = useState<string>("")
 
     const onChangeText = (event: ChangeEvent<HTMLTextAreaElement>) => {
-        console.log(text)
-        // setText(text)
+        setText(event.currentTarget.value)
     }
 
     const onClickSend = async () => {
-        console.log()
+        const res = await fetch("/api/afegirResposta", {
+            method: "POST",
+            body: JSON.stringify({ resposta: text })
+        })
+        console.log(res)
     }
 
     return <main className="home">

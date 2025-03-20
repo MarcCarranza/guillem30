@@ -1,20 +1,20 @@
 @font-face {
   font-family: "FrankOcean";
-  src: url("../public/Britanica\ Expanded\ Regular.ttf");
+  src: url("/Britanica\ Expanded\ Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "FrankOcean";
-  src: url("../public/Britanica\ Expanded\ Bold.ttf");
+  src: url("/Britanica\ Expanded\ Bold.ttf");
   font-weight: bold;
   font-style: bold;
 }
 
 @font-face {
   font-family: "FrankOcean";
-  src: url("../public/Britanica\ Expanded\ Extra\ Bold.ttf");
+  src: url("/Britanica\ Expanded\ Extra\ Bold.ttf");
   font-weight: bolder;
   font-style: bolder;
 }

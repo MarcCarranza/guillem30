@@ -1,14 +1,28 @@
+// Dependencies
 import { Application } from "jsr:@oak/oak/application";
 import { Router } from "jsr:@oak/oak/router";
 import { oakCors } from "@tajpouria/cors";
+
+// Controllers
+import { addResposta, getRespostes } from "./api/db/controllers/respostesController.ts"
+
+// Utils
 import routeStaticFilesFrom from "./util/routeStaticFilesFrom.ts";
+
+// Mock data
 import data from "./api/data.json" with { type: "json" };
 
 export const app = new Application();
 const router = new Router();
 
-router.get("/api/queSon", (context) => {
-  context.response.body = data[0];
+// Recuperar les respostes
+router.get<string>("/api/queSon", async (context) => {
+  context.response.body = await getRespostes(context);
+})
+
+// Afegir respostes a la BBDD
+router.post<string>("/api/afegirResposta", async (context) => {
+  context.response.body = await addResposta(context)
 })
 
 app.use(oakCors());
